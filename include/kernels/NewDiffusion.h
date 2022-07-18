@@ -23,6 +23,9 @@ public:
   NewDiffusion(const InputParameters & parameters);
 
 protected:
+  /// Diffusion coefficient
+  const MaterialProperty<Real> & _diff;
+
   virtual Real computeQpResidual() override;
 
   virtual Real computeQpJacobian() override;
